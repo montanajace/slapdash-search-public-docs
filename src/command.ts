@@ -4,8 +4,10 @@ import firstPage from "./pages/firstPage";
 import secondPage from "./pages/secondPage";
 import thirdPage from "./pages/thirdPage";
 
+const NODE_ENV = process.env.NODE_ENV || "production";
+
 const app = express();
-const PORT = 3000;
+const PORT = NODE_ENV === "development" ? 3000 : 443;
 
 app.get("/", (req, res) => {
   res.setHeader("Allow-Control-Allow-Origin", "*");

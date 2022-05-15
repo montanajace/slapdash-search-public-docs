@@ -1,10 +1,13 @@
 {
   "name": "slapdash-search-public-docs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Slapdash command that searches ClickUp public docs without an API",
   "main": "src/command.ts",
   "scripts": {
-    "serve": "nodemon src/command.ts"
+    "build": "tsc -b",
+    "serve": "node dist/command.js",
+    "start": "tsc -b && node dist/command.js",
+    "dev": "nodemon src/command.ts"
   },
   "keywords": [],
   "author": "",
