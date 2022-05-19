@@ -10,21 +10,24 @@ export default (articleJSON: string): CommandResponse => {
       type: "list",
       options: [
         {
-          title: `View ${article.title} Public Doc in Browser`,
+          title: `View in Browser`,
+          subtitle: article.url,
           action: {
             type: "open-url",
             url: article.url,
           },
         },
         {
-          title: `Copy ${article.title} Public Doc URL`,
+          title: `Copy URL to Clipboard`,
+          subtitle: article.url,
           action: {
             type: "copy",
             value: article.url,
           },
         },
         {
-          title: `Paste ${article.title} Public Doc URL`,
+          title: `Paste URL`,
+          subtitle: article.url,
           action: {
             type: "paste",
             value: article.url,
